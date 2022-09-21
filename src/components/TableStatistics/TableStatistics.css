@@ -1,0 +1,19 @@
+.TableStatistics{
+    margin-top:10px ;
+    height:55px ;
+  }
+  .row{
+    border-radius: 7px;
+    margin-bottom: 2px;
+    height:50px ;
+    display: flex;
+    background-color: rgb(127, 151, 231);
+    border: solid rgb(189, 172, 206) 1px;
+    justify-content: space-between;
+}
+.rowDate{
+    padding-top:10px ;
+    flex-basis: 140px;
+    text-align: center;
+    
+}
