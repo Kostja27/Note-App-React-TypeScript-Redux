@@ -36,6 +36,7 @@
     max-height: 140px;
     min-height: 25px;
     text-align: left;
+    overflow: hidden;
 }
 .rowButton{
     width:15% ;
