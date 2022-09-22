@@ -2,7 +2,7 @@
     margin-top:10px ;
     height:55px ;
   }
-  .row{
+  .StatisticsRow{
     border-radius: 7px;
     margin-bottom: 2px;
     height:50px ;
@@ -11,7 +11,7 @@
     border: solid rgb(189, 172, 206) 1px;
     justify-content: space-between;
 }
-.rowDate{
+.StatisticsRowDate{
     padding-top:10px ;
     flex-basis: 140px;
     text-align: center;

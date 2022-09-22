@@ -69,12 +69,12 @@ const TableDate = () => {
         <div>
             <div className="TableDateInfo">
                 <div className="row">
-                    <span className="rowDate">Name</span>
-                    <span className="rowDate">Created</span>
-                    <span className="rowDate">Category</span>
-                    <span className="rowDate">Content</span>
-                    <span className="rowDate">Dates</span>
-                    {button == false&&addInput==false ? <span className="rowDate">
+                    <span className="rowName">Name</span>
+                    <span className="rowDataCreated">Created</span>
+                    <span className="rowDataCategory">Category</span>
+                    <span className="rowDataContent" style={{textAlign: "center"}}>Content</span>
+                    <span className="rowDates" style={{textAlign: "center"}}>Dates</span>
+                    {button == false&&addInput==false ? <span className="rowButton">
                         <button onClick={() => showHideArchive(Archive == true ? Archive = false : Archive = true)} className="archive">
                             Archive
                         </button>
@@ -84,13 +84,13 @@ const TableDate = () => {
                     if (Archive == false) {
                         if (items.Status == true) {
                             return <div className="row" key={index}>
-                                <span className="rowDate">{items.Name}</span>
-                                <span className="rowDate">{items.Created}</span>
-                                <span className="rowDate">{items.Category}</span>
-                                <span className="rowDate">{items.Content}</span>
-                                <span className="rowDate">{items.Dates}</span>
+                                <span className="rowName">{items.Name}</span>
+                                <span className="rowDataCreated">{items.Created}</span>
+                                <span className="rowDataCategory">{items.Category}</span>
+                                <span className="rowDataContent">{items.Content}</span>
+                                <span className="rowDates">{items.Dates}</span>
                                 {button == false&&addInput==false ?
-                                    <span className="rowDate">
+                                    <span className="rowButton">
                                         <button onClick={() => statusChange(index)} className='change'>
                                             change
                                         </button>
@@ -103,7 +103,7 @@ const TableDate = () => {
                                     </span> : null}
                             </div>
                         } else if (items.Status == "change") {
-                            return <div key={index}>
+                            return <div  className='row' key={index}>
                                 <input onChange={changeInput} ref={nameInput} defaultValue={store.input.Name} className="inputName"></input>
                                 <select onChange={changeInput} ref={categoryInput} defaultValue={store.input.Category} className="inputCategory">
                                     <option>Task </option>
@@ -120,12 +120,12 @@ const TableDate = () => {
                     } else if (Archive == true) {
                         if (items.Status == false) {
                             return <div className="row" key={index}>
-                                <span className="rowDate">{items.Name}</span>
-                                <span className="rowDate">{items.Created}</span>
-                                <span className="rowDate">{items.Category}</span>
-                                <span className="rowDate">{items.Content}</span>
-                                <span className="rowDate">{items.Dates}</span>
-                                <span className="rowDate">
+                                <span className="rowName">{items.Name}</span>
+                                <span className="rowDataCreated">{items.Created}</span>
+                                <span className="rowDataCategory">{items.Category}</span>
+                                <span className="rowDataContent">{items.Content}</span>
+                                <span className="rowDates">{items.Dates}</span>
+                                <span className="rowButton">
                                     <button onClick={() => deleteFromArchive(index)} className='addToArchive'>arch</button>
                                     <button onClick={() => deleteRow(index)} className='remove'>Del</button>
                                 </span>
@@ -139,7 +139,7 @@ const TableDate = () => {
                     <button className="addTable" onClick={() => showHideAddInput(addInput == true ? addInput = false : addInput = true)}>Create Note</button>
                 </div>)
                 : addInput === true && Archive == false ?
-                    (<div>
+                    (<div className='row'>
                         <input onChange={changeInput} ref={nameInput} className="inputName"></input>
                         <select onChange={changeInput} ref={categoryInput} className="inputCategory">
                             <option> </option>

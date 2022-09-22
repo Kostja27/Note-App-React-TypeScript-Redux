@@ -9,7 +9,7 @@ const status_Change = "statusChange"
 const change_Input="changeInput"
 
 let defaultState: date = {
-  row: [{ Name: "Shopping list", Created: "2022.08.24", Category: "Task", Content: "Milk", Dates: "", Status: true },
+  row: [{ Name: "Shopping list", Created: "2022.08.24", Category: "Task", Content: " Buy milk", Dates: "", Status: true },
   { Name: 'City', Created: "2022.04.23", Category: "Random Thought", Content: "Go to the museum", Dates: "", Status: false },
   { Name: "Book", Created: "2022.09.17", Category: "Random Thought", Content: "Read something", Dates: "", Status: true },
   { Name: "life", Created: "2022.03.28", Category: "Target", Content: "Run 1 km", Dates: " 3.5.2021, 5.5.2021", Status: true },

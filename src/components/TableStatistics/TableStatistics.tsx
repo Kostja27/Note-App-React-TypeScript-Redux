@@ -21,15 +21,15 @@ function TableStatistics() {
     })
     return (
         <div className="TableStatistics">
-            <div className="row">
-                <span className="rowDate">Note Category</span><span className="rowDate">Active</span><span className="rowDate">Archived</span>
+            <div className="StatisticsRow">
+                <span className="StatisticsRowDate">Note Category</span><span className="StatisticsRowDate">Active</span><span className="StatisticsRowDate">Archived</span>
             </div>
             {array.map(function(items,index){
                 return(
-                    <div className="row" key={index} >
-                    <span className="rowDate">{items.name}</span> 
-                    <span className="rowDate">{items.Active}</span>
-                    <span className="rowDate">{items.Archived}</span>
+                    <div className="StatisticsRow" key={index} >
+                    <span className="StatisticsRowDate">{items.name}</span> 
+                    <span className="StatisticsRowDate">{items.Active}</span>
+                    <span className="StatisticsRowDate">{items.Archived}</span>
                     </div>
                 )
             })}

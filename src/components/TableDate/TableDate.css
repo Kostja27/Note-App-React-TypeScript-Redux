@@ -1,28 +1,63 @@
 .row{
     border-radius: 7px;
     margin-bottom: 2px;
-    height:90px ;
     display: flex;
     background-color: rgb(127, 151, 231);
     border: solid rgb(189, 172, 206) 1px;
     justify-content: space-between;
 }
-.rowDate{
-    overflow: hidden;
-    padding-top:10px ;
-    flex-basis: 140px;
+.rowName{
     text-align: center;
-    
+    overflow: hidden;
+    width:10% ; 
+    max-height: 140px;  
+}
+.rowDataCreated{
+    width:10% ;
+    text-align: center;
+    max-height: 140px;
+    min-height: 25px;
+}
+.rowDataCategory{
+    text-align: center;
+    width:5% ;
+    max-height: 140px; 
+    min-height: 25px;  
+}
+.rowDataContent{
+    overflow: hidden;
+    width:30% ;
+    max-height: 140px;
+    text-align: center;
+    min-height: 25px;
+}
+.rowDates{
+    width:20%;
+    max-height: 140px;
+    min-height: 25px;
+    text-align: left;
+}
+.rowButton{
+    width:15% ;
+    text-align: right;
+    max-height: 14px;
+    min-height: 25px;
+}
+
+
+
+.inputName{
+  width:10% ;
+  border-radius: 7px;
+}
+.inputCategory{
+    border-radius: 7px;
+    width:10% ;
+}
+.inputData{
+    width:80% ;
+    border-radius: 7px;
 }
 .addTable{
     margin-left: auto;
-}
-.inputName{
-
-}
-.inputCategory{
-
-}
-.inputData{
-    
 }
