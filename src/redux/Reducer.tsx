@@ -12,7 +12,7 @@ let defaultState: date = {
   row: [{ Name: "Shopping list", Created: "2022.08.24", Category: "Task", Content: "Milk", Dates: "", Status: true },
   { Name: 'City', Created: "2022.04.23", Category: "Random Thought", Content: "Go to the museum", Dates: "", Status: false },
   { Name: "Book", Created: "2022.09.17", Category: "Random Thought", Content: "Read something", Dates: "", Status: true },
-  { Name: "life", Created: "2022.03.28", Category: "Target", Content: "Run 1 km", Dates: " 3/5/2021, 5/5/2021", Status: true },
+  { Name: "life", Created: "2022.03.28", Category: "Target", Content: "Run 1 km", Dates: " 3.5.2021, 5.5.2021", Status: true },
   { Name: "Create App", Created: "2022.01.26", Category: "Idea", Content: "Create to do list", Dates: "", Status: false },
   { Name: "Shopping list", Created: "2022.05.18", Category: "Task", Content: "Porridge", Dates: "", Status: true },
   { Name: "life", Created: "2022.03.24", Category: "Random Thought", Content: "I am the best", Dates: "", Status: true },
@@ -41,7 +41,7 @@ function reducer(state = defaultState, action: action) {
       }
     case change_Row:
       return {
-        ...state, row: state.row.map(function (item, index) { if (index == action.num) { console.log(action.newRow);return  item=action.newRow;   } else return item }) 
+        ...state, row: state.row.map(function (item, index) { if (index == action.num) { return  item=action.newRow;   } else return item }) 
       }
       case change_Input:
         return { ...state, input:action.newRow }
